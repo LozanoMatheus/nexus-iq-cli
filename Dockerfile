@@ -12,13 +12,4 @@ RUN mkdir -p ${GOPATH}/src ${GOPATH}/bin \
 
 RUN curl -LO https://download.sonatype.com/clm/scanner/nexus-iq-cli-1.64.0-02.jar
 
-# GO Example:
-## go mod init
-## go generate
-## java -jar /opt/nexus-iq-cli-1.64.0-02.jar -i my_app_id -a user:pass -r result.json -s https://my_iqs_server -t build go.sum
-
-## Python Example:
-## pip install -U --no-cache-dir pipreqs ; pipreqs --force ./
-## java -jar /opt/nexus-iq-cli-1.64.0-02.jar -i my_app_id -a user:pass -r result.json -s https://my_iqs_server -t build go.sum
-
 CMD [ "java", "-jar", "/opt/nexus-iq-cli-1.64.0-02.jar" ]
